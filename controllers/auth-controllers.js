@@ -2,6 +2,7 @@ import { signinValidator, signupValidator } from "../validators/authValidator.js
 import userModal from "../model/user-modal.js";
 import { createToken, verifyToken } from "../utils/jwt.js";
 import { myroutes } from "../config/constants.js";
+import { networkInterfaces } from "os";
 
 export async function handleSignupwithEmail(req, res) {
     try {
@@ -138,16 +139,18 @@ export async function handlegoogleCallback(access, refresh, profile, done){
         // check if user already exists
         let user = await userModal.findOne({ where: {googleID : profile.id} })
         console.log('searching user : ', user);
+
+        const newtoken = createToken({email: profile.emails[0].value, token: access})
+        if(!newtoken){
+            res.status(400).json({message: 'failed to create token'})
+            return;
+        }
         
         if(!user) {
             // create new user if doesn't exist
             console.log('creating new user');
             // create new token because google one does not contain good data
-            const newtoken = createToken({email: profile.emails[0].value, token: access})
-            if(!newtoken){
-                res.status(400).json({message: 'failed to create token'})
-                return;
-            }
+            
             console.log('new token: ', newtoken);
             user = await userModal.create({
                 name: profile.displayName,
@@ -157,6 +160,9 @@ export async function handlegoogleCallback(access, refresh, profile, done){
                 googleID: profile.id
             })
             
+        }else{
+            await userModal.update({authToken: newtoken}, {where: {googleID: profile.id}})
+            user.authToken = newtoken
         }
         return done(null, user)
     } catch (error) {

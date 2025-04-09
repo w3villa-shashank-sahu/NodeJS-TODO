@@ -10,15 +10,15 @@ passport.use(new googleStrategy({
     callbackURL: passportConfig.googleRedirectUrl,
 }, handlegoogleCallback))
 
-passport.serializeUser((user, done)=>{
-    done(null, user.id)
-})
+// passport.serializeUser((user, done)=>{
+//     done(null, user.id)
+// })
 
-passport.deserializeUser( async (id, done) => {
-    try{
-        const user = await userModal.findByPk(id);
-        done(null, user)
-    }catch(error){
-        done(error, null)
-    }
-})
+// passport.deserializeUser( async (id, done) => {
+//     try{
+//         const user = await userModal.findByPk(id);
+//         done(null, user)
+//     }catch(error){
+//         done(error, null)
+//     }
+// })
