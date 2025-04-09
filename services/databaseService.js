@@ -6,7 +6,7 @@ const sequelize = new Sequelize(databaseConfig.dbName, databaseConfig.userName, 
 })
 
 try{
-    await sequelize.authenticate();
+    await sequelize.authenticate({logging: false});
     console.log('connection has been established successfully');
 } catch (error){
     console.log('Failed to connect to database ', error);

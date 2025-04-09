@@ -22,11 +22,11 @@ app.use('/todo', todoRouter)
 async function init() {
     try{
         // test the connection
-    await sequelize.authenticate();
-    console.log('database authenticated successfully');
+    // await sequelize.authenticate();
+    // console.log('database authenticated successfully');
 
     // create table if not present
-    await sequelize.sync();
+    await sequelize.sync({logging:false});
     console.log('sync successfully');
         
     // start server
