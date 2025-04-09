@@ -1,8 +1,8 @@
 import { signinValidator, signupValidator } from "../validators/authValidator.js";
 import userModal from "../model/user-modal.js";
 import { createToken, verifyToken } from "../utils/jwt.js";
-import { myroutes } from "../config/constants.js";
-import { networkInterfaces } from "os";
+// import { myroutes } from "../config/constants.js";
+// import { networkInterfaces } from "os";
 
 export async function handleSignupwithEmail(req, res) {
     try {
@@ -22,7 +22,7 @@ export async function handleSignupwithEmail(req, res) {
             res.status(400).json({message: 'error generating access token'})
         }
 
-        const user = await userModal.findOne({email: email})
+        const user = await userModal.findOne({where: {email: email}})
         if(user){
             res.status(400).json({message: 'User Already exists'})
             return;
@@ -45,6 +45,7 @@ export async function handleSigninEmail(req, res) {
    try {
     const email = req.body.email;
     const password = req.body.password;
+    console.log('email: ', email);
 
         // validation
     const {error, _} = signinValidator.validate({email: email, password: password})

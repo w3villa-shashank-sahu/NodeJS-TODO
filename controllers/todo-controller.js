@@ -49,7 +49,7 @@ export async function handleUpdateTodo(req, res) {
 
         await todo.update(updateData);
         
-        res.status(200).json({ message: 'Todo updated successfully', todo });
+        res.status(200).json({ message: 'Todo updated successfully'});
     } catch (error) {
         res.status(500).json({ message: `Unexpected error occurred: ${error}` });
     }
