@@ -1,4 +1,5 @@
+import { sendSuccess } from "../utils/response.js";
+
 export function handleDashboard(req, res){
-    
-    res.send('welcome to the dashboard')
+    return sendSuccess(res, 200, 'Welcome to the dashboard');
 }

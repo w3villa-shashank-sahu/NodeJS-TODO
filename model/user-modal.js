@@ -31,6 +31,10 @@ const userModal = sequelize.define('user', {
     authToken : {
         type: DataTypes.TEXT,
         allowNull: false
+    },
+    role: {
+        type: DataTypes.STRING,
+        defaultValue: 'USER'
     }
 })
 

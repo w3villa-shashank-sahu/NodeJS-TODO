@@ -1,5 +1,6 @@
 import userModal from "../model/user-modal.js";
 import { verifyToken } from "../utils/jwt.js";
+import {logger} from "../utils/winston.js"
 
 export async function isAuth(req, res, next) {
     let token = req.header('authorization')
@@ -13,7 +14,7 @@ export async function isAuth(req, res, next) {
         return;
     }
     token = token[1];
-    const email = verifyToken(token);
+    const {email} = verifyToken(token);
     if(!email){
         res.status(400).send('Invalid token')
         return;
@@ -24,7 +25,7 @@ export async function isAuth(req, res, next) {
         res.status(400).send('Invalid token')
         return;
     }
-    console.log('user :', user);
+    logger.info('user :', user);
     
 
     if(user.dataValues.authToken.length == 0){

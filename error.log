@@ -1,0 +1,64 @@
+2025-04-15T06:13:48.959Z
+Error in function: loginHandler
+    Route: /auth/sign-up
+    Message: email is not defined
+    Stack: ReferenceError: email is not defined
+    at handleSignupwithEmail (file:///home/shashank/Desktop/tasks/nodeJS%20training/Assignment1/controllers/auth-controllers.js:14:41)
+    at Layer.handleRequest (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/layer.js:152:17)
+    at next (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/route.js:157:13)
+    at validateSignUpData (file:///home/shashank/Desktop/tasks/nodeJS%20training/Assignment1/middleware/dataValidation-middleware.js:18:5)
+    at Layer.handleRequest (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/layer.js:152:17)
+    at next (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/route.js:117:3)
+    at handle (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/layer.js:152:17)
+    at /home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/index.js:295:15 
+
+2025-04-15T06:14:16.154Z
+Error in function: loginHandler
+    Route: /auth/sign-up
+    Message: email is not defined
+    Stack: ReferenceError: email is not defined
+    at handleSignupwithEmail (file:///home/shashank/Desktop/tasks/nodeJS%20training/Assignment1/controllers/auth-controllers.js:14:41)
+    at Layer.handleRequest (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/layer.js:152:17)
+    at next (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/route.js:157:13)
+    at validateSignUpData (file:///home/shashank/Desktop/tasks/nodeJS%20training/Assignment1/middleware/dataValidation-middleware.js:18:5)
+    at Layer.handleRequest (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/layer.js:152:17)
+    at next (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/route.js:117:3)
+    at handle (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/layer.js:152:17)
+    at /home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/index.js:295:15 
+
+2025-04-15T06:44:38.580Z
+   Error in function: handleSignupwithEmail
+    Route: /auth/sign-up
+    Message: email is not defined
+    Stack: ReferenceError: email is not defined
+    at handleSignupwithEmail (file:///home/shashank/Desktop/tasks/nodeJS%20training/Assignment1/controllers/auth-controllers.js:14:41)
+    at Layer.handleRequest (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/layer.js:152:17)
+    at next (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/route.js:157:13)
+    at validateSignUpData (file:///home/shashank/Desktop/tasks/nodeJS%20training/Assignment1/middleware/dataValidation-middleware.js:18:5)
+    at Layer.handleRequest (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/layer.js:152:17)
+    at next (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/route.js:117:3)
+    at handle (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/layer.js:152:17)
+    at /home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/index.js:295:15 
+
+2025-04-15T06:44:38.580Z
+   Error in function: handleSignupwithEmail
+    Route: /auth/sign-up
+    Message: email is not defined
+    Stack: ReferenceError: email is not defined
+    at handleSignupwithEmail (file:///home/shashank/Desktop/tasks/nodeJS%20training/Assignment1/controllers/auth-controllers.js:14:41)
+    at Layer.handleRequest (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/layer.js:152:17)
+    at next (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/route.js:157:13)
+    at validateSignUpData (file:///home/shashank/Desktop/tasks/nodeJS%20training/Assignment1/middleware/dataValidation-middleware.js:18:5)
+    at Layer.handleRequest (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/layer.js:152:17)
+    at next (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/route.js:117:3)
+    at handle (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/layer.js:152:17)
+    at /home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/index.js:295:15 
+
