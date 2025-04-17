@@ -1,5 +1,5 @@
 2025-04-15T06:13:48.959Z
-Error in function: loginHandler
+Error in function: handleSignupwithEmail
     Route: /auth/sign-up
     Message: email is not defined
     Stack: ReferenceError: email is not defined
@@ -15,7 +15,7 @@ Error in function: loginHandler
     at /home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/index.js:295:15 
 
 2025-04-15T06:14:16.154Z
-Error in function: loginHandler
+Error in function: handleSignupwithEmail
     Route: /auth/sign-up
     Message: email is not defined
     Stack: ReferenceError: email is not defined
@@ -61,4 +61,91 @@ Error in function: loginHandler
     at handle (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/index.js:435:11)
     at Layer.handleRequest (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/layer.js:152:17)
     at /home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/index.js:295:15 
+
+2025-04-15 07:56:30
+   Error in function: init
+    Route: main file
+    Message: req is not defined
+    Stack: ReferenceError: req is not defined
+    at init (file:///home/shashank/Desktop/tasks/nodeJS%20training/Assignment1/services/databaseService.js:21:63)
+    at file:///home/shashank/Desktop/tasks/nodeJS%20training/Assignment1/app.js:30:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:98:5) 
+
+2025-04-15 10:45:46
+   Error in function: init
+    Route: app.js
+    Message: listen EADDRINUSE: address already in use :::3000
+    Stack: Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1937:16)
+    at listenInCluster (node:net:1994:12)
+    at Server.listen (node:net:2099:7)
+    at Function.listen (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/express/lib/application.js:605:24)
+    at file:///home/shashank/Desktop/tasks/nodeJS%20training/Assignment1/app.js:28:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) 
+
+2025-04-16 05:03:30
+   Error in function: handleGetAllTodo
+    Route: /todo/get-all
+    Message: Cannot read properties of undefined (reading '#todosCache')
+    Stack: TypeError: Cannot read properties of undefined (reading '#todosCache')
+    at handleGetAllTodo (file:///home/shashank/Desktop/tasks/nodeJS%20training/Assignment1/controllers/todo-controller.js:110:21)
+    at Layer.handleRequest (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/layer.js:152:17)
+    at next (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/route.js:117:3)
+    at handle (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/layer.js:152:17)
+    at /home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/index.js:295:15
+    at processParams (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/index.js:582:12)
+    at next (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/index.js:291:5)
+    at Function.handle (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/index.js:186:3) 
+
+2025-04-16 05:40:15
+   Error in function: handleGetAllTodo
+    Route: /todo/get-all
+    Message: t.toJSON is not a function
+    Stack: TypeError: t.toJSON is not a function
+    at file:///home/shashank/Desktop/tasks/nodeJS%20training/Assignment1/controllers/todo-controller.js:122:102
+    at Array.map (<anonymous>)
+    at TodoController.handleGetAllTodo (file:///home/shashank/Desktop/tasks/nodeJS%20training/Assignment1/controllers/todo-controller.js:122:91)
+    at Layer.handleRequest (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/layer.js:152:17)
+    at next (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/route.js:117:3)
+    at handle (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/layer.js:152:17)
+    at /home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/index.js:295:15
+    at processParams (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/index.js:582:12) 
+
+2025-04-16 05:42:07
+   Error in function: handleGetAllTodo
+    Route: /todo/get-all
+    Message: t.toJSON is not a function
+    Stack: TypeError: t.toJSON is not a function
+    at file:///home/shashank/Desktop/tasks/nodeJS%20training/Assignment1/controllers/todo-controller.js:122:102
+    at Array.map (<anonymous>)
+    at handleGetAllTodo (file:///home/shashank/Desktop/tasks/nodeJS%20training/Assignment1/controllers/todo-controller.js:122:91)
+    at Layer.handleRequest (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/layer.js:152:17)
+    at next (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/route.js:117:3)
+    at handle (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/layer.js:152:17)
+    at /home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/index.js:295:15
+    at processParams (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/index.js:582:12) 
+
+2025-04-16 05:42:10
+   Error in function: handleGetAllTodo
+    Route: /todo/get-all
+    Message: t.toJSON is not a function
+    Stack: TypeError: t.toJSON is not a function
+    at file:///home/shashank/Desktop/tasks/nodeJS%20training/Assignment1/controllers/todo-controller.js:122:102
+    at Array.map (<anonymous>)
+    at handleGetAllTodo (file:///home/shashank/Desktop/tasks/nodeJS%20training/Assignment1/controllers/todo-controller.js:122:91)
+    at Layer.handleRequest (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/layer.js:152:17)
+    at next (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/route.js:117:3)
+    at handle (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/lib/layer.js:152:17)
+    at /home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/index.js:295:15
+    at processParams (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/router/index.js:582:12) 
 

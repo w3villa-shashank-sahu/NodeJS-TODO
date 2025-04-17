@@ -1,15 +1,13 @@
 import winston from "winston";
 
-const {combine, timestamp, printf, errors, cli} = winston.format;
+const {combine, timestamp, printf, cli} = winston.format;
 
 const logger = winston.createLogger({
-    // format: winston.format.cli(),
     
     format: combine(
         timestamp(),
         cli(),
-        errors({ stack: true }),
-        printf((info) => `${info.timestamp} ${info.level} ${info.message} ${info.errors}`)
+        printf((info) => `${info.timestamp.replace('T', ' ').substr(0, 19)} ${info.level} ${info.message}`)
     ), 
     level: 'debug',
     transports: [
@@ -25,7 +23,7 @@ const errorLogger = winston.createLogger({
     winston.format.timestamp(),
     winston.format.cli(),
     winston.format.printf(({ timestamp, level, message }) => {
-      return `${timestamp}\n${message} \n`;
+      return `${timestamp.replace('T', ' ').substr(0, 19)}\n${message} \n`;
     })
   ),
   transports: [

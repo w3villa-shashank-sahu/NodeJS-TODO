@@ -14,24 +14,24 @@ export async function isAuth(req, res, next) {
         return;
     }
     token = token[1];
-    const {email} = verifyToken(token);
-    if(!email){
+    const {email, role} = verifyToken(token);
+    if(!email || !role){
         res.status(400).send('Invalid token')
         return;
     }
-
-    const user = await userModal.findOne({where: {email : email.email}});
+    const user = await userModal.findOne({where: {email : email}});
     if(!user){
         res.status(400).send('Invalid token')
         return;
     }
-    logger.info('user :', user);
+    logger.info(`user : ${user}`);
     
 
     if(user.dataValues.authToken.length == 0){
-        res.status(400).send('User not Authenticated, Signin Again');
+        res.status(400).send('User is Logged Out, SignIn Again');
         return;
     }
-
+    req.email = email
+    req.role = role
     next();
 }

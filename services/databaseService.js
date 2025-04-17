@@ -3,9 +3,9 @@ import { databaseConfig } from "../config/appConfig.js";
 import {logger, logError} from "../utils/winston.js"
 
 const sequelize = new Sequelize(databaseConfig.dbName, databaseConfig.userName, databaseConfig.password, {
-    dialect: 'mysql'
+    dialect: 'mysql',
+    logging: false
 })
-
 
 export async function init() {
     try{
@@ -14,10 +14,10 @@ export async function init() {
         logger.info('database authenticated successfully');
 
         // create table if not present
-        await sequelize.sync({logging:false});
+        await sequelize.sync();
         logger.info('sync successfully');
     } catch (error){
-        logError({error, functionName : 'databaseinit',route: req.originalUrl })
+        logError({error, functionName : 'databaseinit',route: 'databaseServices.js' })
     }
 }
 
