@@ -16,7 +16,7 @@ class TodoController {
             }
 
             const newtodo = await todoModal.create({ title: title, desc: description });
-            logger.info('new todo: ', newtodo);
+            // logger.info('new todo: ', newtodo);
 
             if (!newtodo) {
                 // This case might be redundant if create throws an error, but kept for safety
@@ -56,7 +56,7 @@ class TodoController {
             if (done !== undefined) updateData.done = done;
             // updateData.abc = 'abc' 
 
-            logger.info(Object.keys(updateData).length);
+            // logger.info(Object.keys(updateData).length);
 
             if(Object.keys(updateData) == 0){
                 return sendError(res, 400, 'No field matched to be update!')
@@ -107,21 +107,21 @@ class TodoController {
         
         // console.log('cache: ', this.todosCache);
         
-        logger.info('Entering handleGetAllTodo');
+        // logger.info('Entering handleGetAllTodo');
         try {
-            logger.info('Calling todoModal.findAll()');
+            // logger.info('Calling todoModal.findAll()');
             if(this.todosCache.length){
                 return sendSuccess(res, 200, 'Todos retrieved from cache', this.todosCache)
             }
             const todos = await todoModal.findAll();
-            logger.info(`Found ${todos ? todos.length : 0} todos`); 
+            // logger.info(`Found ${todos ? todos.length : 0} todos`); 
             this.todosCache = todos.map(t => t.toJSON())   // caching
-            console.log('stored in cache ', this.todosCache);
+            // console.log('stored in cache ', this.todosCache);
             
             return sendSuccess(res, 200, 'Todos retrieved successfully', this.todosCache);
         } catch (error) {
             logError({error, functionName : 'handleGetAllTodo',route: req.originalUrl })
-            logger.error(`Get All Todos Error: ${error.message}`); 
+            // logger.error(`Get All Todos Error: ${error.message}`); 
             return sendError(res, 500, 'Unexpected error occurred while retrieving all todos', error.message, error.stack);
         }
     }

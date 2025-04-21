@@ -8,7 +8,8 @@ export const createTodoValidator = Joi.object({
 export const updateTodoBodyValidator = Joi.object({
     title: Joi.string().min(3).max(50).optional(),
     description: Joi.string().max(200).optional(),
-    completed: Joi.boolean().optional(),
+    done: Joi.boolean().optional(),
+
 }).min(1); 
 
 export const todoIdParamValidator = Joi.object({
