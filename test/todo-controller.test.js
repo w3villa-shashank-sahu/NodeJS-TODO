@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { describe, it, before, beforeEach, afterEach, after } from 'mocha';
+import { describe, it, before, beforeEach, after } from 'mocha';
 import todoController from '../controllers/todo-controller.js';
 import { init as initDatabase } from '../services/databaseService.js';
 import todoModal from '../model/todo-modal.js';

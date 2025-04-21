@@ -222,3 +222,67 @@ Error in function: handleSignupwithEmail
     at async TodoController.handleCreateTodo (file:///home/shashank/Desktop/tasks/nodeJS%20training/Assignment1/controllers/todo-controller.js:18:29)
     at async Context.<anonymous> (file:///home/shashank/Desktop/tasks/nodeJS%20training/Assignment1/test/todo-controller.test.js:27:9) 
 
+2025-04-21 04:17:05
+   Error in function: handleSigninEmail
+    Route: undefined
+    Message: Table 'test_node_todo.users' doesn't exist
+    Stack: Error: 
+    at Query.run (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/sequelize/src/dialects/mysql/query.js:46:25)
+    at /home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/sequelize/src/sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at MySQLQueryInterface.select (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/sequelize/src/dialects/abstract/query-interface.js:1001:12)
+    at Function.findAll (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/sequelize/src/model.js:1824:21)
+    at Function.findOne (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/sequelize/src/model.js:1998:12)
+    at AuthController.handleSigninEmail (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/controllers/auth-controllers.js:48:22)
+    at Object.<anonymous> (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/test/auth-controller.test.js:43:9) 
+
+2025-04-21 04:49:27
+   Error in function: handleSigninEmail
+    Route: undefined
+    Message: Table 'test_node_todo.users' doesn't exist
+    Stack: Error: 
+    at Query.run (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/sequelize/src/dialects/mysql/query.js:46:25)
+    at /home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/sequelize/src/sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at MySQLQueryInterface.select (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/sequelize/src/dialects/abstract/query-interface.js:1001:12)
+    at Function.findAll (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/sequelize/src/model.js:1824:21)
+    at Function.findOne (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/sequelize/src/model.js:1998:12)
+    at AuthController.handleSigninEmail (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/controllers/auth-controllers.js:48:22)
+    at Object.<anonymous> (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/test/auth-controller.test.js:39:5) 
+
+2025-04-21 05:21:28
+   Error in function: handleSigninEmail
+    Route: undefined
+    Message: WHERE parameter "email" has invalid "undefined" value
+    Stack: Error: WHERE parameter "email" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/sequelize/src/dialects/abstract/query-generator.js:2451:13)
+    at /home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/sequelize/src/dialects/abstract/query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/sequelize/src/dialects/abstract/query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/sequelize/src/dialects/abstract/query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/sequelize/src/dialects/abstract/query-generator.js:1466:28)
+    at MySQLQueryInterface.select (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/sequelize/src/dialects/abstract/query-interface.js:1002:27)
+    at Function.findAll (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/sequelize/src/model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at Function.findOne (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/sequelize/src/model.js:1998:12)
+    at AuthController.handleSigninEmail (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/controllers/auth-controllers.js:48:22)
+    at Object.<anonymous> (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/test/auth-controller.test.js:105:9) 
+
+2025-04-21 05:27:35
+   Error in function: handleSigninEmail
+    Route: undefined
+    Message: WHERE parameter "email" has invalid "undefined" value
+    Stack: Error: WHERE parameter "email" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/sequelize/src/dialects/abstract/query-generator.js:2451:13)
+    at /home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/sequelize/src/dialects/abstract/query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/sequelize/src/dialects/abstract/query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/sequelize/src/dialects/abstract/query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/sequelize/src/dialects/abstract/query-generator.js:1466:28)
+    at MySQLQueryInterface.select (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/sequelize/src/dialects/abstract/query-interface.js:1002:27)
+    at Function.findAll (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/sequelize/src/model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at Function.findOne (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/node_modules/sequelize/src/model.js:1998:12)
+    at AuthController.handleSigninEmail (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/controllers/auth-controllers.js:48:22)
+    at Object.<anonymous> (/home/shashank/Desktop/tasks/nodeJS training/Assignment1/test/auth-controller.test.js:105:9) 
+

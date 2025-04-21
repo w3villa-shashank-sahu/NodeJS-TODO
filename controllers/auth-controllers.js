@@ -43,10 +43,10 @@ class AuthController {
     async handleSigninEmail(req, res) {
     try {
         const {email, password} = req.body;
-                
+
         // find email id in database
         const user = await userModal.findOne({
-            where : { email: email }
+            where : { email: email ?? null }
         })
 
         if(!user){
