@@ -25,7 +25,7 @@ app.use('/todo', todoRouter)
 init().then(
     () => {
         logger.info('database connected successfully')
-        const server = app.listen(appConfig.port, ()=> logger.info(`server running on PORT: ${appConfig.port}`))
+        const server = app.listen(process.env.PORT ?? appConfig.port, ()=> logger.info(`server running on PORT: ${process.env.PORT ?? appConfig.port}`))
         server.on('error', (error) => {
             logError({error, functionName:'init', route:'app.js'});
         });
